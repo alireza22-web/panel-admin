@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@font-face {
+  font-family: "shabnam" ;
+  src: url(../public/font/Shabnam-Medium.ttf);
+  font-display: swap;
+}
+
+body{
+  font-family: "shabnam";
+}
+
+.res{
+  @apply container mx-auto px-6
+}
+
+.active{
+  @apply text-black dark:text-white
+}
