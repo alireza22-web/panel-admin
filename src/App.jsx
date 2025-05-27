@@ -4,6 +4,7 @@ import { CartContextfunc } from "./context/CartCantext";
 import { Orders } from "./pages/Orders";
 import { Users } from "./pages/Users";
 import { Products } from "./pages/Products";
+import { ProductsItem } from "./pages/ProductsItem";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
             <Route path="/" element={<Home/>} />
             <Route path="/orders" element={<Orders/>} />
             <Route path="/products" element={<Products/>} />
+            <Route path="/products/:id" element={<ProductsItem/>} />
             <Route path="/users" element={<Users/>} />
           </Routes>
         </CartContextfunc>

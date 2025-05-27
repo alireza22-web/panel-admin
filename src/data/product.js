@@ -93,7 +93,7 @@ export const products = [
   {
     id:8,
     name:"محصول 8",
-    image:"https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg",
+    image:"https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg",
     price:987000,
     category:"shirt-women",
     descriptio:"لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است",

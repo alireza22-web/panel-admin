@@ -18,4 +18,17 @@ body{
 .active{
   @apply text-black dark:text-white
 }
+.lol{
+  position: absolute;
+  bottom: -20px;
+  right: -50px;
+  transition: all .15s ease-in;
+  opacity: 0;
+  visibility: hidden;
+}
+.flol:hover > span{
+  opacity: 1;
+  visibility: visible;
+}
+
 
