@@ -3,6 +3,7 @@ import ReactPaginate from 'react-paginate';
 
 const PaginationWrapper = ({ data, itemsPerPage, onPageDataChange }) => {
   const [currentPage, setCurrentPage] = useState(0);
+  
 
   const pageCount = Math.ceil(data.length / itemsPerPage);
 

@@ -5,7 +5,7 @@ export const CartCantext = createContext()
 export const CartContextfunc = ({children})=>{
 
   
-  const [nav,setNav] = useState(false)
+  const [nav,setNav] = useState(true)
 
   return (
     <CartCantext.Provider value={{setNav,nav}}>

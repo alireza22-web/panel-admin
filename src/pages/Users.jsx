@@ -50,7 +50,7 @@ export const Users = () => {
         <Sidebar/>
         <div className="col-span-8 max-lg:col-span-7">
           <Navbar/>
-          <div className="pt-4 px-6 max-sm:px-3 flex flex-col gap-3">
+          <div className="pt-4 pb-8 px-6 max-sm:px-3 flex flex-col gap-3">
             <div className="flex flex-col gap-2 pb-3">
               <p className="dark:text-gray-500 text-gray-700">فیلتر بر اساس</p>
               <div className="flex gap-4">
@@ -78,7 +78,7 @@ export const Users = () => {
                 <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
               </svg>
             </div>
-            <div className="max-sm:overflow-x-scroll">
+            <div className="max-sm:overflow-x-scroll h-[315px] max-sm:h-[346px] scroll">
               <table className="w-full max-sm:text-sm h-fit  max-sm:mx-auto text-right border-b px-4 dark:bg-gray-800">
                 <thead>
                   <tr className="border-b dark:bg-gray-950 bg-gray-200">
@@ -94,11 +94,11 @@ export const Users = () => {
                     currentUsers.map((item,i)=>{
                       return (
                         <tr className="even:bg-gray-200 even:dark:bg-gray-950" key={i}>
-                          <td className="px-4 py-4 max-sm:px-2 max-sm:py-2">{item.name}</td>
-                          <td className="px-4 py-4 max-sm:px-2 max-sm:py-2">{item.email}</td>
-                          <td className="px-4 py-4 max-sm:px-2 max-sm:py-2">{item.role}</td>
-                          {item.status == "online" ? <td className="px-4 py-4 max-sm:px-2 max-sm:py-2"><span className="px-[11px] bg-green-400 rounded-full"></span></td> : <td className="px-4 py-4 max-sm:px-2 max-sm:py-2"><span className="px-[11px] bg-red-600 rounded-full"></span></td>}
-                          <td className="px-4 py-4 max-sm:px-2 max-sm:py-2" onClick={()=>deleteUser(item.id)}>delete</td>
+                          <td className="px-4 py-4 max-sm:px-3 max-sm:py-3">{item.name}</td>
+                          <td className="px-4 py-4 max-sm:px-3 max-sm:py-3">{item.email}</td>
+                          <td className="px-4 py-4 max-sm:px-3 max-sm:py-3">{item.role}</td>
+                          {item.status == "online" ? <td className="px-4 py-4 max-sm:px-3 max-sm:py-3"><span className="px-[11px] bg-green-400 rounded-full"></span></td> : <td className="px-4 py-4 max-sm:px-3 max-sm:py-3"><span className="px-[11px] bg-red-600 rounded-full"></span></td>}
+                          <td className="px-4 py-4 max-sm:px-3 max-sm:py-3" onClick={()=>deleteUser(item.id)}>delete</td>
                         </tr>
                       )
                     })
