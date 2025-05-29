@@ -58,7 +58,7 @@ export const products = [
     price:987000,
     category:"electronic",
     description:"لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است",
-    inventory:14,
+    inventory:0,
     rating:{
       rate:4.4,
       count:146,
@@ -97,7 +97,7 @@ export const products = [
     price:987000,
     category:"shirt-women",
     description:"لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است",
-    inventory:22,
+    inventory:0,
     rating:{
       rate:4.4,
       count:146,

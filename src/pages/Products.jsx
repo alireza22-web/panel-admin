@@ -128,7 +128,7 @@ export const Products = () => {
                               <img
                                 className="w-[70px] h-[70px]"
                                 src={item.image}
-                                alt=""
+                                alt={item.name}
                               />
                             </Link>
                           </td>

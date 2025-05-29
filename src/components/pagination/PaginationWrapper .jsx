@@ -15,6 +15,8 @@ const PaginationWrapper = ({ data, itemsPerPage, onPageDataChange }) => {
   }, [currentPage, data, itemsPerPage]);
 
   const handlePageClick = (event) => {
+    console.log(event.selected);
+    
     setCurrentPage(event.selected);
   };
 

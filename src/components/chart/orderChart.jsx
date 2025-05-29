@@ -10,7 +10,7 @@ import {
   Legend,
   ArcElement
 } from "chart.js";
-import { Bar } from "react-chartjs-2";
+import { Bar, Line } from "react-chartjs-2";
 
 // ثبت پلاگین‌ها
 ChartJS.register(CategoryScale,ArcElement, LinearScale, BarElement, Title, Tooltip, Legend);
@@ -32,6 +32,7 @@ const data = {
     {
       label: "مبلغ سفارش (تومان)",
       data: orders.map((order) => order.total_price),
+      // borderColor: isDark ? "oklch(35.9% 0.144 278.697)" : "#3b82f6",
       backgroundColor: "#3b82f6",
       borderRadius: 6,
       maxBarThickness: 40,
@@ -70,7 +71,7 @@ const OrderChart = () => {
       <h2 className="dark:text-white text-black">
         <span>نمودار سفارش ها</span> 
       </h2>
-      <Bar data={data} options={options} />
+      <Line data={data} options={options} />
     </div>
   );
 };

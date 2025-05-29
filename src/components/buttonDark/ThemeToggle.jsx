@@ -25,7 +25,6 @@ export default function ThemeToggle({ setDark }) {
   // 🎯 اینجا keydown رو برای کل صفحه می‌گیریم
   useEffect(() => {
     const handleKeyDown = (e) => {
-      console.log('press : ' + e.key)
       if (e.ctrlKey && e.key.toLowerCase() === 'k') {
         e.preventDefault()
         toggleTheme()
@@ -37,7 +36,7 @@ export default function ThemeToggle({ setDark }) {
       document.removeEventListener('keydown', handleKeyDown)
     }
   }, [isDark]) 
-
+  
   return (
     <button
       onClick={toggleTheme}

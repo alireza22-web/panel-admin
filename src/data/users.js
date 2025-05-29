@@ -50,9 +50,9 @@ export const users = [
   },
   {
     id:8,
-    name:"سعید رضایی",
+    name:"احمد رضایی",
     email:"saeed@gmail.com",
-    status:"offline",
+    status:"online",
     role:"کاربر"
   },
   {

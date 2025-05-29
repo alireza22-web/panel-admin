@@ -32,7 +32,7 @@ export const Sidebar = ()=>{
   return (
     <>
       <div className={`col-span-2 max-lg:col-span-3 bg-gray-100 relative max-md:fixed z-50 max-md:top-0 max-md:w-full
-  ${nav ? "max-md:translate-x-full" : "max-md:translate-0"} 
+  ${nav ? "max-md:translate-0" : " max-md:translate-x-full"} 
   transition-all duration-100 dark:bg-black border-gray-300 p-4`}>
 
   {/* fixed content to keep it always in view */}
@@ -42,7 +42,7 @@ export const Sidebar = ()=>{
       <span>صفحه ادمین</span>
       <button
         className="md:hidden absolute left-10 top-2 max-sm:left-5"
-        onClick={() => setNav(!nav)}
+        onClick={() => setNav(false)}
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +65,7 @@ export const Sidebar = ()=>{
         >
           <NavLink
             to={item.link}
-            onClick={() => setNav(false)}
+            onClick={() => setNav(!nav)}
             className="flex gap-2 items-center justify-start"
           >
             <svg

@@ -10,7 +10,7 @@ import {
   Legend,
   ArcElement
 } from "chart.js";
-import { Bar, Doughnut } from "react-chartjs-2";
+import { Doughnut } from "react-chartjs-2";
 
 ChartJS.register(CategoryScale,ArcElement, LinearScale, BarElement, Title, Tooltip, Legend);
   
@@ -76,7 +76,7 @@ const options = {
 };
 
   return (
-    <div className="pb-12 shadow-lg bg-gradient-to-b from-gray-100 to-gray-200 dark:from-[#202020] dark:to-[#101010] rounded-2xl h-[300px] w-fit mt-5 p-6 ">
+    <div className="pb-12 shadow-lg bg-gradient-to-b from-gray-100 to-gray-200 dark:from-[#202020] dark:to-[#101010] rounded-2xl h-[300px] w-full p-6 ">
       <h2 className="dark:text-white text-black font-bold">
         <span>نمودار سفارش ها</span> 
       </h2>
