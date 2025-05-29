@@ -1,5 +1,5 @@
 import React from "react";
-import { Line } from "react-chartjs-2";
+import { Bar, Line } from "react-chartjs-2";
 import {
   Chart as ChartJS,
   LineElement,
@@ -19,9 +19,9 @@ const LineChart = ({ isDark }) => {
       {
         label: "فروش",
         data: [100, 200, 150, 300,240,180,110,145,120,250,260,270],
-        borderColor: isDark ? "#38bdf8" : "#3b82f6", // آبی روشن در تاریک و معمولی در روشن
-        backgroundColor: isDark ? "#38bdf8" : "#3b82f6",
-        tension: 0.3,
+        borderColor: isDark ? "oklch(35.9% 0.144 278.697)" : "#3b82f6", // آبی روشن در تاریک و معمولی در روشن
+        backgroundColor: isDark ? "oklch(35.9% 0.144 278.697)" : 'oklch(50% 0.134 242.749)',
+        tension: 0.1,
       },
     ],
   };
@@ -64,7 +64,7 @@ const LineChart = ({ isDark }) => {
   // bg-gradient-to-tr from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900
 
   return (
-    <div className={`p-6 h-[400px] mt-5 pb-20 mx-3 rounded-xl shadow-lg bg-gradient-to-b from-gray-100 to-gray-200 dark:from-gray-800 dark:to-gray-900`}>
+    <div className={`p-6 h-[400px] mt-5 pb-20 mx-3 rounded-xl shadow-lg bg-gradient-to-b from-gray-100 to-gray-200 dark:from-[#202020] dark:to-[#101010]`}>
       <h2 className={`text-xl font-bold mb-4 ${isDark ? "text-white" : "text-gray-800"}`}>
         نمودار فروش سال اخیر
       </h2>

@@ -31,31 +31,62 @@ export const Sidebar = ()=>{
   
   return (
     <>
-      <div className={`col-span-2 max-lg:col-span-3 bg-gray-100 max-md:fixed z-50 max-md:top-0 max-md:w-full ${nav ? "max-md:translate-x-full" : "max-md:translate-0"} transition-all duration-100 dark:bg-black h-screen border-gray-300 p-4`}>
-        <div className="mt-6 text-center font-semibold text-3xl relative">
-          <span>صفحه ادمین</span>
-          <button className="md:hidden absolute left-10 top-2 max-sm:left-5" onClick={()=>setNav(!nav)}>
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+      <div className={`col-span-2 max-lg:col-span-3 bg-gray-100 relative max-md:fixed z-50 max-md:top-0 max-md:w-full
+  ${nav ? "max-md:translate-x-full" : "max-md:translate-0"} 
+  transition-all duration-100 dark:bg-black border-gray-300 p-4`}>
+
+  {/* fixed content to keep it always in view */}
+  <div className="fixed top-0 right-0 h-screen w-[20%] max-lg:w-[30%] max-md:relative max-md:w-full bg-inherit p-4 overflow-y-auto">
+
+    <div className="mt-6 text-center font-semibold relative text-3xl">
+      <span>صفحه ادمین</span>
+      <button
+        className="md:hidden absolute left-10 top-2 max-sm:left-5"
+        onClick={() => setNav(!nav)}
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          strokeWidth={1.5}
+          stroke="currentColor"
+          className="size-6"
+        >
+          <path strokeLinecap="round" strokeLinejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>
+      </button>
+    </div>
+
+    <ul className="mt-12 text-lg text-gray-700 dark:text-gray-500">
+      {listItem.map((item, i) => (
+        <li
+          key={i}
+          className="mt-4 py-1 border-r-2 px-4 rounded-xs border-gray-500 hover:border-gray-800 hover:pr-6 transition-all duration-150 mx-4"
+        >
+          <NavLink
+            to={item.link}
+            onClick={() => setNav(false)}
+            className="flex gap-2 items-center justify-start"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth={1.5}
+              stroke="currentColor"
+              className="size-6"
+            >
+              {item.icon}
             </svg>
-          </button>
-        </div>
-        <ul className="mt-12 text-lg text-gray-700 dark:text-gray-500">
-          {
-            listItem.map((item,i)=>{
-              return (
-                <li key={i} className="mt-4 py-1 border-r-2 px-4 rounded-xs border-gray-500 hover:border-gray-800 hover:pr-6 transition-all duration-150 mx-4 ">
-                  <NavLink to={item.link} onClick={()=>setNav(!nav)} className="flex gap-2 items-center justify-start">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6">{item.icon}</svg>
-                    <div>{item.title}</div>
-                  </NavLink>
-                </li>
-              )
-            })
-          }
-        </ul>
-        
-      </div>
+            <div>{item.title}</div>
+          </NavLink>
+        </li>
+      ))}
+    </ul>
+
+  </div>
+</div>
+
     </>
   )
 }

@@ -25,7 +25,7 @@ const PaginationWrapper = ({ data, itemsPerPage, onPageDataChange }) => {
         nextLabel={'بعدی'}
         pageCount={pageCount}
         onPageChange={handlePageClick}
-        containerClassName={'pagination  flex items-center gap-4 cursor-pointer px-3 py-2 bg-gray-200 dark:bg-gray-800 rounded-md'}
+        containerClassName={'pagination  flex items-center gap-4 cursor-pointer px-3 py-2 bg-gray-200 dark:bg-[#101010] rounded-md'}
         activeClassName={'bg-sky-500 text-white rounded'}
         pageLinkClassName={'px-5 max-sm:px-2 py-12  rounded'}
         previousLinkClassName={'px-3 py-1  rounded'}

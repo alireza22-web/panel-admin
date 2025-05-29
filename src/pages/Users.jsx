@@ -50,7 +50,7 @@ export const Users = () => {
         <Sidebar/>
         <div className="col-span-8 max-lg:col-span-7">
           <Navbar/>
-          <div className="pt-4 pb-8 px-6 max-sm:px-3 flex flex-col gap-3">
+          <div className="pt-4 pb-8 px-6 max-sm:px-3 min-h-screen flex flex-col gap-3">
             <div className="flex flex-col gap-2 pb-3">
               <p className="dark:text-gray-500 text-gray-700">فیلتر بر اساس</p>
               <div className="flex gap-4">
@@ -73,15 +73,15 @@ export const Users = () => {
               </div>
             </div>
             <div className="relative ">
-              <input placeholder="جستجو بر اساس نام کاربر" type="text" onChange={(e)=>setSearch(e.target.value)} value={search} className="bg-gray-200 w-full rounded-lg px-4 py-3 border-none outline-none dark:bg-gray-900"/>
+              <input placeholder="جستجو بر اساس نام کاربر" type="text" onChange={(e)=>setSearch(e.target.value)} value={search} className="bg-gray-200 w-full rounded-lg px-4 py-3 border-none outline-none dark:bg-[#404040]"/>
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="size-6 absolute left-3 top-1/2 -translate-y-1/2">
                 <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
               </svg>
             </div>
             <div className="max-sm:overflow-x-scroll h-[315px] max-sm:h-[346px] scroll">
-              <table className="w-full max-sm:text-sm h-fit  max-sm:mx-auto text-right border-b px-4 dark:bg-gray-800">
+              <table className="w-full max-sm:text-sm h-fit  max-sm:mx-auto text-right border-b px-4 dark:bg-[#202020]">
                 <thead>
-                  <tr className="border-b dark:bg-gray-950 bg-gray-200">
+                  <tr className="border-b dark:bg-[#080808] bg-gray-200">
                     <th className="px-4 py-1 max-sm:px-2 max-sm:py-0.5">اسم</th>
                     <th className="px-4 py-1 max-sm:px-2 max-sm:py-0.5">ایمیل</th>
                     <th className="px-4 py-1 max-sm:px-2 max-sm:py-0.5">نقش</th>
@@ -93,7 +93,7 @@ export const Users = () => {
                   {
                     currentUsers.map((item,i)=>{
                       return (
-                        <tr className="even:bg-gray-200 even:dark:bg-gray-950" key={i}>
+                        <tr className="even:bg-gray-200 even:dark:bg-[#080808]" key={i}>
                           <td className="px-4 py-4 max-sm:px-3 max-sm:py-3">{item.name}</td>
                           <td className="px-4 py-4 max-sm:px-3 max-sm:py-3">{item.email}</td>
                           <td className="px-4 py-4 max-sm:px-3 max-sm:py-3">{item.role}</td>
