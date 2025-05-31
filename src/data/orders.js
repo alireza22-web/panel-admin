@@ -40,6 +40,26 @@ const orders = [
     created_at: "2025-05-26T14:05:00Z"
   },
   {
+    id: 1006,
+    order_number: "ORD-1003",
+    customer_name: "رضا محمدی",
+    items_count: 4,
+    total_price: 3450000,
+    payment_status: "پرداخت شده",
+    order_status: "ارسال شده",
+    created_at: "2025-05-26T09:50:00Z"
+  },
+  {
+    id: 1007,
+    order_number: "ORD-1004",
+    customer_name: "زهرا موسوی",
+    items_count: 3,
+    total_price: 2760000,
+    payment_status: "پرداخت شده",
+    order_status: "تحویل داده شده",
+    created_at: "2025-05-26T14:05:00Z"
+  },
+  {
     id: 1005,
     order_number: "ORD-1005",
     customer_name: "حمید کریمی",
